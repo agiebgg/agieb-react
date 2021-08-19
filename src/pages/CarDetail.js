@@ -31,7 +31,7 @@ const CarDetail = () => {
 
                 <div class="form-group">
                 <label>Plate Number:</label>
-                <input type="number" class="form-control" name="plate_number" />
+                <input type="text" class="form-control" name="plate_number" />
                 </div><br />
 
 

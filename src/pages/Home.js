@@ -2,11 +2,14 @@ import Header from '../components/Header'
 import Meta from '../components/Meta'
 import { LinkContainer } from 'react-router-bootstrap'
 import { Container, Row, Col } from 'react-bootstrap'
+import React, { useState } from "react";
+import DatePicker from "react-datepicker";
 
 const Home = () => {
   // page content
   const pageTitle = 'Personal Details Form'
   const pageDescription = 'Please fill up the form'
+  const [startDate, setStartDate] = useState(new Date());
 
 
 
@@ -32,10 +35,14 @@ const Home = () => {
                   <input type="text" class="form-control" name="last_name" />
                 </div><br />
 
-                <div class="form-group">
+                 <div class="form-group">
                  <label>Date Of Birth:</label>
-                  <input type="date" class="form-control" name="dob" />
-                </div><br />
+                 <DatePicker 
+                  class="form-control"
+                  selected={startDate} 
+                  onChange={date => setStartDate(date)} 
+                 />
+                 </div><br />
 
                 <div class="form-group">
                  <label>Email:</label>
